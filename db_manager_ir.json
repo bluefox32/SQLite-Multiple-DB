@@ -1,0 +1,768 @@
+{
+  "metadata": {
+    "file": "db_manager.py",
+    "source_hash": "49c6d7237650eea9069d285734742083925bddf3749b00b893d3c87581419ddf",
+    "lines": 503,
+    "format": "compiler_ir_v1.0"
+  },
+  "structure": {
+    "types": {
+      "function_signatures": [
+        {
+          "name": "demo",
+          "args": [],
+          "return": "Any",
+          "lineno": 425
+        },
+        {
+          "name": "__init__",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            },
+            {
+              "name": "master_path",
+              "type": "Any"
+            },
+            {
+              "name": "work_dir",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 50
+        },
+        {
+          "name": "_init_master",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 67
+        },
+        {
+          "name": "_log",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            },
+            {
+              "name": "db_name",
+              "type": "Any"
+            },
+            {
+              "name": "operation",
+              "type": "Any"
+            },
+            {
+              "name": "status",
+              "type": "Any"
+            },
+            {
+              "name": "message",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 97
+        },
+        {
+          "name": "register_db",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            },
+            {
+              "name": "db_name",
+              "type": "Any"
+            },
+            {
+              "name": "source_path",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 110
+        },
+        {
+          "name": "open_db",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            },
+            {
+              "name": "db_name",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 173
+        },
+        {
+          "name": "save_db",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            },
+            {
+              "name": "db_name",
+              "type": "Any"
+            },
+            {
+              "name": "mem_conn",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 214
+        },
+        {
+          "name": "use_db",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            },
+            {
+              "name": "db_name",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 264
+        },
+        {
+          "name": "list_dbs",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 279
+        },
+        {
+          "name": "show_logs",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            },
+            {
+              "name": "db_name",
+              "type": "Any"
+            },
+            {
+              "name": "limit",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 303
+        },
+        {
+          "name": "verify_all",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 328
+        },
+        {
+          "name": "_get_registry",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            },
+            {
+              "name": "db_name",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 353
+        },
+        {
+          "name": "_decompress_and_verify",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            },
+            {
+              "name": "row",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 362
+        },
+        {
+          "name": "close",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 383
+        },
+        {
+          "name": "__enter__",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 388
+        },
+        {
+          "name": "__exit__",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            },
+            {
+              "name": "exc_type",
+              "type": "Any"
+            },
+            {
+              "name": "exc_val",
+              "type": "Any"
+            },
+            {
+              "name": "exc_tb",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 391
+        },
+        {
+          "name": "__init__",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            },
+            {
+              "name": "manager",
+              "type": "Any"
+            },
+            {
+              "name": "db_name",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 402
+        },
+        {
+          "name": "__enter__",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 407
+        },
+        {
+          "name": "__exit__",
+          "args": [
+            {
+              "name": "self",
+              "type": "Any"
+            },
+            {
+              "name": "exc_type",
+              "type": "Any"
+            },
+            {
+              "name": "exc_val",
+              "type": "Any"
+            },
+            {
+              "name": "exc_tb",
+              "type": "Any"
+            }
+          ],
+          "return": "Any",
+          "lineno": 411
+        }
+      ],
+      "class_definitions": [
+        {
+          "name": "SecurityError",
+          "bases": [
+            "Exception"
+          ],
+          "lineno": 25
+        },
+        {
+          "name": "DBNotFoundError",
+          "bases": [
+            "Exception"
+          ],
+          "lineno": 29
+        },
+        {
+          "name": "MasterDBManager",
+          "bases": [],
+          "lineno": 38
+        },
+        {
+          "name": "_DBContext",
+          "bases": [],
+          "lineno": 399
+        }
+      ],
+      "variable_types": []
+    },
+    "control_flow": {
+      "loops": [
+        {
+          "type": "For",
+          "lineno": 292
+        },
+        {
+          "type": "For",
+          "lineno": 319
+        },
+        {
+          "type": "For",
+          "lineno": 334
+        },
+        {
+          "type": "For",
+          "lineno": 480
+        }
+      ],
+      "conditionals": [
+        {
+          "lineno": 501,
+          "has_else": false
+        },
+        {
+          "lineno": 57,
+          "has_else": true
+        },
+        {
+          "lineno": 285,
+          "has_else": false
+        },
+        {
+          "lineno": 305,
+          "has_else": true
+        },
+        {
+          "lineno": 358,
+          "has_else": false
+        },
+        {
+          "lineno": 365,
+          "has_else": false
+        },
+        {
+          "lineno": 375,
+          "has_else": false
+        },
+        {
+          "lineno": 412,
+          "has_else": false
+        },
+        {
+          "lineno": 122,
+          "has_else": true
+        },
+        {
+          "lineno": 413,
+          "has_else": true
+        }
+      ],
+      "exception_handlers": [
+        {
+          "lineno": 121,
+          "handlers": 1,
+          "has_finally": false
+        },
+        {
+          "lineno": 184,
+          "handlers": 2,
+          "has_finally": false
+        },
+        {
+          "lineno": 222,
+          "handlers": 1,
+          "has_finally": false
+        },
+        {
+          "lineno": 335,
+          "handlers": 2,
+          "has_finally": false
+        }
+      ],
+      "critical_sections": []
+    },
+    "memory_operations": {
+      "file_io": [
+        {
+          "operation": "open",
+          "lineno": 408
+        },
+        {
+          "operation": "open",
+          "lineno": 368
+        },
+        {
+          "operation": "open",
+          "lineno": 143
+        },
+        {
+          "operation": "open",
+          "lineno": 194
+        },
+        {
+          "operation": "open",
+          "lineno": 230
+        },
+        {
+          "operation": "open",
+          "lineno": 239
+        },
+        {
+          "operation": "open",
+          "lineno": 124
+        },
+        {
+          "operation": "open",
+          "lineno": 131
+        }
+      ],
+      "compression": [
+        {
+          "operation": "zlib.decompress",
+          "lineno": 371
+        },
+        {
+          "operation": "zlib.compress",
+          "lineno": 136
+        },
+        {
+          "operation": "self._decompress_and_verify",
+          "lineno": 186
+        },
+        {
+          "operation": "zlib.compress",
+          "lineno": 234
+        },
+        {
+          "operation": "self._decompress_and_verify",
+          "lineno": 336
+        }
+      ],
+      "database": [
+        {
+          "operation": "sqlite3.connect",
+          "lineno": 63
+        },
+        {
+          "operation": "self.master.executescript",
+          "lineno": 69
+        },
+        {
+          "operation": "self.master.execute",
+          "lineno": 99
+        },
+        {
+          "operation": "self.master.execute('SELECT * FROM db_registry ORDER BY created_at').fetchall",
+          "lineno": 281
+        },
+        {
+          "operation": "self.master.execute('SELECT * FROM db_registry').fetchall",
+          "lineno": 330
+        },
+        {
+          "operation": "self.master.execute('SELECT * FROM db_registry WHERE db_name=?', (db_name,)).fetchone",
+          "lineno": 355
+        },
+        {
+          "operation": "self.master.execute",
+          "lineno": 148
+        },
+        {
+          "operation": "sqlite3.connect",
+          "lineno": 189
+        },
+        {
+          "operation": "sqlite3.connect",
+          "lineno": 198
+        },
+        {
+          "operation": "sqlite3.connect",
+          "lineno": 225
+        },
+        {
+          "operation": "self.master.execute",
+          "lineno": 243
+        },
+        {
+          "operation": "self.master.execute('SELECT * FROM access_log WHERE db_name=?\\n                   ORDER BY accessed_at DESC LIMIT ?', (db_name, limit)).fetchall",
+          "lineno": 306
+        },
+        {
+          "operation": "self.master.execute('SELECT * FROM access_log ORDER BY accessed_at DESC LIMIT ?', (limit,)).fetchall",
+          "lineno": 312
+        },
+        {
+          "operation": "db.execute",
+          "lineno": 445
+        },
+        {
+          "operation": "db.execute",
+          "lineno": 452
+        },
+        {
+          "operation": "db.execute",
+          "lineno": 454
+        },
+        {
+          "operation": "db.execute",
+          "lineno": 462
+        },
+        {
+          "operation": "db.execute",
+          "lineno": 469
+        },
+        {
+          "operation": "db.execute",
+          "lineno": 471
+        },
+        {
+          "operation": "db.execute('SELECT * FROM users').fetchall",
+          "lineno": 478
+        },
+        {
+          "operation": "sqlite3.connect",
+          "lineno": 129
+        },
+        {
+          "operation": "self.master.execute",
+          "lineno": 281
+        },
+        {
+          "operation": "self.master.execute",
+          "lineno": 330
+        },
+        {
+          "operation": "self.master.execute",
+          "lineno": 355
+        },
+        {
+          "operation": "self.master.execute",
+          "lineno": 306
+        },
+        {
+          "operation": "self.master.execute",
+          "lineno": 312
+        },
+        {
+          "operation": "db.execute",
+          "lineno": 478
+        }
+      ],
+      "hashing": [
+        {
+          "operation": "hashlib.sha256(raw_data).hexdigest",
+          "lineno": 374
+        },
+        {
+          "operation": "hashlib.sha256(raw_data).hexdigest",
+          "lineno": 139
+        },
+        {
+          "operation": "hashlib.sha256(raw_data).hexdigest",
+          "lineno": 235
+        },
+        {
+          "operation": "hashlib.sha256",
+          "lineno": 374
+        },
+        {
+          "operation": "hashlib.sha256",
+          "lineno": 139
+        },
+        {
+          "operation": "hashlib.sha256",
+          "lineno": 235
+        }
+      ]
+    },
+    "security_boundaries": {
+      "checksum_validation": [
+        {
+          "lineno": 375,
+          "condition": "current_checksum != row['checksum']"
+        }
+      ],
+      "exception_handling": [
+        {
+          "lineno": 121,
+          "handler_count": 1
+        },
+        {
+          "lineno": 184,
+          "handler_count": 2
+        },
+        {
+          "lineno": 222,
+          "handler_count": 1
+        },
+        {
+          "lineno": 335,
+          "handler_count": 2
+        }
+      ],
+      "resource_cleanup": [
+        {
+          "lineno": 434,
+          "context": "MasterDBManager('master.db')"
+        },
+        {
+          "lineno": 368,
+          "context": "open(compressed_path, 'rb')"
+        },
+        {
+          "lineno": 444,
+          "context": "manager.use_db('users')"
+        },
+        {
+          "lineno": 461,
+          "context": "manager.use_db('products')"
+        },
+        {
+          "lineno": 477,
+          "context": "manager.use_db('users')"
+        },
+        {
+          "lineno": 143,
+          "context": "open(compressed_path, 'wb')"
+        },
+        {
+          "lineno": 194,
+          "context": "open(temp_path, 'wb')"
+        },
+        {
+          "lineno": 230,
+          "context": "open(temp_path, 'rb')"
+        },
+        {
+          "lineno": 239,
+          "context": "open(compressed_path, 'wb')"
+        },
+        {
+          "lineno": 124,
+          "context": "open(source_path, 'rb')"
+        },
+        {
+          "lineno": 131,
+          "context": "open(temp_path, 'rb')"
+        }
+      ],
+      "input_validation": []
+    }
+  },
+  "verification": {
+    "rules": {
+      "data_flow_rules": [
+        {
+          "id": "rule_001",
+          "name": "Checksum Must Always Verify",
+          "description": "SHA256 checksum検証が常に実行されること",
+          "check": "if checksum_verify in security_boundaries",
+          "severity": "CRITICAL"
+        },
+        {
+          "id": "rule_002",
+          "name": "File Handle Always Close",
+          "description": "ファイルハンドルが必ずクローズされること",
+          "check": "if resource_cleanup count == file_io count",
+          "severity": "HIGH"
+        },
+        {
+          "id": "rule_003",
+          "name": "Exception Handling Complete",
+          "description": "全ファイルI/Oが例外処理に包まれること",
+          "check": "if exception_handlers > 0",
+          "severity": "HIGH"
+        },
+        {
+          "id": "rule_004",
+          "name": "No Memory Leak on Compression",
+          "description": "圧縮・展開時のメモリリークがないこと",
+          "check": "memory_safety_check()",
+          "severity": "CRITICAL"
+        },
+        {
+          "id": "rule_005",
+          "name": "Transaction Atomicity",
+          "description": "DB操作の原子性が保証されること",
+          "check": "atomic_operation_check()",
+          "severity": "HIGH"
+        },
+        {
+          "id": "rule_006",
+          "name": "No SQL Injection",
+          "description": "プリペアドステートメントのみを使用",
+          "check": "prepared_statement_only()",
+          "severity": "CRITICAL"
+        }
+      ],
+      "optimization_rules": [
+        {
+          "id": "opt_001",
+          "name": "Compress in Parallel",
+          "description": "マルチスレッド圧縮でパフォーマンス向上",
+          "potential_gain": "30-40%"
+        },
+        {
+          "id": "opt_002",
+          "name": "Incremental Backup",
+          "description": "差分バックアップで転送量削減",
+          "potential_gain": "50-70%"
+        },
+        {
+          "id": "opt_003",
+          "name": "Lazy Decompression",
+          "description": "必要な部分だけを展開",
+          "potential_gain": "20-30%"
+        }
+      ]
+    },
+    "expected_checks": [
+      "CHECKSUM_VALIDATION",
+      "MEMORY_SAFETY",
+      "FILE_INTEGRITY",
+      "TRANSACTION_SAFETY",
+      "RESOURCE_CLEANUP"
+    ]
+  }
+}

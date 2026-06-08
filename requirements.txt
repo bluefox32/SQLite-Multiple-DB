@@ -1,0 +1,26 @@
+# SQLite Compression Manager - Dependencies
+# 
+# Note: Most dependencies are Python standard library
+# Only optional enhancements are listed below
+
+# Core dependencies (bundled with Python 3.7+)
+# - sqlite3
+# - zlib
+# - hashlib
+# - json
+# - datetime
+# - os
+# - pathlib
+
+# Optional: For enhanced compression (not required for basic operation)
+# lz4==4.0.2          # Ultra-fast compression alternative to zlib
+
+# Development dependencies (for testing and building)
+# pytest==7.4.0
+# pytest-cov==4.1.0
+# black==23.7.0
+# pylint==2.17.4
+
+# Documentation
+# sphinx==7.1.2
+# sphinx-rtd-theme==1.3.0
