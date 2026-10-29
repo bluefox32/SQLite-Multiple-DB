@@ -108,7 +108,8 @@ class CodeAnalyzer:
 def generate_report():
     """静的解析レポート生成"""
     
-    analyzer = CodeAnalyzer('/mnt/user-data/outputs/db_manager.py')
+    # 修正(2026-10-29): 作成環境の絶対パスをやめ、同リポジトリ内の db_manager.py をスクリプト相対で参照する
+    analyzer = CodeAnalyzer(Path(__file__).parent / 'db_manager.py')
     
     print("=" * 70)
     print("db_manager.py - 静的解析レポート")

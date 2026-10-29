@@ -274,7 +274,8 @@ def main():
     print("db_manager.py - Compiler Intermediate Representation")
     print("=" * 70)
     
-    compiler = CompilerIR('/mnt/user-data/outputs/db_manager.py')
+    # 修正(2026-10-29): 作成環境の絶対パスをやめ、同リポジトリ内の db_manager.py をスクリプト相対で参照する
+    compiler = CompilerIR(Path(__file__).parent / 'db_manager.py')
     
     # 型情報
     print("\n[TYPE ANNOTATIONS]")
@@ -318,7 +319,8 @@ def main():
     print("\n[GENERATING COMPILER IR...]")
     ir = compiler.generate_ir_json()
     
-    ir_file = '/mnt/user-data/outputs/db_manager_ir.json'
+    # 修正(2026-10-29): 出力先も作成環境の絶対パスをやめ、スクリプトと同じフォルダにする
+    ir_file = Path(__file__).parent / 'db_manager_ir.json'
     with open(ir_file, 'w', encoding='utf-8') as f:
         json.dump(ir, f, indent=2, ensure_ascii=False)
     print(f"  ✓ IR exported to: {ir_file}")
